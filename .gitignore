@@ -1,7 +1,0 @@
-dump/*
-dump/*/
-Backup/*
-/shells/*
-*.env
-vendor/*
-vendor
