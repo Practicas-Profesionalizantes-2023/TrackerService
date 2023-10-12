@@ -82,10 +82,12 @@ $repuestos_form = new AutomaticForm(
             'repuesto-stado' => [
                 'title_label' => 'Estado',
                 'id_name' => 'estado-repuesto',
-                'type' => 'text',
+                'type' => 'select',
                 'height' => 6,
                 'placeholder' => '0',
                 'required' => true,
+                
+
             ]
 
         
@@ -312,7 +314,7 @@ $categoria_form = new AutomaticForm(
                     <div class="space-y-4">
                         <div>
                             <label for="repuesto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repuesto</label>
-                            <input type="text" name="repuesto" id="editar-repuesto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="equipo" placeholder="equipo" required="">
+                            <input type="text" name="repuesto" id="editar-repuesto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="repuesto" placeholder="repuesto" required="">
                         </div>
                         <div>
                             <label for="descripcion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripcion</label>
@@ -370,7 +372,7 @@ $categoria_form = new AutomaticForm(
                 </form>
 
             </div>
-      <!-- Delete euipo Drawer -->
+      <!-- Delete  Drawer -->
       <div id="drawer-delete-spareparts-default" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 translate-x-full" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
                 <h5 id="drawer-label" class="inline-flex items-center text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
                     Eliminar <?= $nombre_formulario ?>
@@ -391,7 +393,7 @@ $categoria_form = new AutomaticForm(
                     Si, estoy seguro.
                 </a>
             </div>
-            <!-- Formulario Eliminar Equipo -->
+            <!-- Formulario Eliminar -->
    <script>
         function handleDeleteButtonClick(sparepartsId) {
            
@@ -410,14 +412,19 @@ $categoria_form = new AutomaticForm(
             var nombreInput = document.getElementById("editar-nombre");
             var descripcionInput = document.getElementById("editar-descripcion");
             var proveedorInput = document.getElementById("editar-proveedor");
+            var stockInput=document.getElementById("edit-stock");
+            var gananciaInput=document.getElementById("edit-ganancia");
             var categoriaInput = document.getElementById("editar-categoria");
+            var estadoInput=document.getElementById("editar-estado");
 
             // Llenar los campos con los datos del formulario
-            repuestoInput.value = nombre;
+            nombreImput.value = nombre;
             descripcionInput.value = descripcion;
+            proveedorInput.value=proveedor;
             stockInput.value =stock;
             costoInput.value = costo;
             gananciaInput.value=ganancia;
+            categoriaInput.value=categoria;
             estadoInput.value=estado;
         }
     </script>
