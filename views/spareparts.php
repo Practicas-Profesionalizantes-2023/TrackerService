@@ -330,16 +330,16 @@ $categoria_form = new AutomaticForm(
                         </div>
                         <div>
                             <label for="ganancia" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ganancia</label>
-                            <input type="text" name="ganancia" id="editar-repuesto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="ganancia" placeholder="ganancia" required="">
+                            <input type="text" name="ganancia" id="editar-repuesto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="ganancia" placeholder="" required="">
                         </div>
 
                         <div class="mb-4">
                             <label for="proveedor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Selecciona un Proveedor</label>
                             <select id="editar-spare" name="proveedor" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
 
-                                <?php foreach ($spareparts_controller->ListSpareparts() as $obj_spare) : ?>
+                                <?php foreach ($spareparts_controller->ListProveedores() as $obj_spare) : ?>
 
-                                    <option><?= $obj_spare->prov_empresa  ?></option>
+                                    <option><?= $obj_spare->nombre_prov  ?></option>
 
                                 <?php endforeach; ?>
                             </select>
@@ -351,9 +351,9 @@ $categoria_form = new AutomaticForm(
                             <label for="categoria" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Selecciona una categioría</label>
                             <select id="editar-categoria" name="categoria" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
 
-                                <?php foreach ($spareparts_controller->ListSpareparts() as $obj_spare) : ?>
+                                <?php foreach ($spareparts_controller->ListCategorias() as $obj_spare) : ?>
 
-                                    <option><?= $obj_spare->descripcion_categoria?></option>
+                                    <option><?= $obj_spare->nombre_categoria?></option>
 
                                 <?php endforeach; ?>
                             </select>

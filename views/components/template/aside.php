@@ -4,6 +4,7 @@
         "/user/" => "Usuarios",
         "/ticket/" => "Tickets",
         "/equipment/" => "Equipos",
+        "/spareparts/" => "Repuestos",
     ];
 
     $aside_items = [

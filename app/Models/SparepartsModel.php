@@ -161,4 +161,35 @@ class SparepartsModel
         return $stm->execute($params);
         
     }
+    public function ListCategorias() //Listo la categorias de repuestos
+    {
+        try {
+            $stm = $this->pdo->prepare(
+                "SELECT `categoria_repuestos`.`categoria_repuesto_descripcion` AS `nombre_categoria`
+                FROM `categorias_repuestos` AS `categoria_repuestos`;"
+            );
+
+            $stm->execute();
+            return $stm->fetchAll(\PDO::FETCH_OBJ);
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    public function ListProveedores() //listo proveedores
+    {
+        try {
+            $stm = $this->pdo->prepare(
+                "SELECT `proveedores`.`prov_empresa` AS `nombre_prov`
+                FROM `proveedores` AS `proveedores`;"
+            );
+
+            $stm->execute();
+            return $stm->fetchAll(\PDO::FETCH_OBJ);
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+
 }
