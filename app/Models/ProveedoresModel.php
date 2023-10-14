@@ -25,7 +25,7 @@ class ProveedoresModel
     public function ListProveedores() //listo los proveedores en tabla
     {
         try {
-            $stm = $this->pdo->prepare("SELECT * FROM `proveedores` ORDER BY `proveedores`.`id_proveedor ` DESC");
+            $stm = $this->pdo->prepare("SELECT * FROM `proveedores` ORDER BY `proveedores`.`id_proveedor` DESC");
             $stm->execute();
             return $stm->fetchAll(\PDO::FETCH_OBJ);
         } catch (\Exception $e) {
