@@ -241,7 +241,7 @@ $prov_controller = new ProvController;
             <!-- Formulario Eliminar Cliente -->
 
 
-            <!-- Formulario Crear Cliente -->
+            <!-- Formulario Crear Proveedor -->
             <div id="crear-cliente" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
                 <h5 id="drawer-label" class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
                     Nuevo Cliente

@@ -37,7 +37,7 @@ class ProveedoresModel
     {
         try {
             $stm = $this->pdo->prepare("SELECT * FROM proveedores WHERE `proveedores`.`id_proveedor` = :id_proveedor");
-            $stm->bindParam(':id_proveedor ', $this->id, \PDO::PARAM_INT);
+            $stm->bindParam(':id_proveedor', $this->id, \PDO::PARAM_INT);
             $stm->execute();
             return $stm->fetchAll(\PDO::FETCH_OBJ);
         } catch (\Exception $e) {
@@ -47,7 +47,7 @@ class ProveedoresModel
 
     public function CreateProv() //creo un provedor
     {
-        $sql = "INSERT INTO `proveedores` (`prov_estado`, `prov_empresa`, `prov_cuit`, `prov_dir`, `prov_tel`, `prov_email`, `prov_web`) VALUES (:prov_estado,:nombre_prov,:prov_cuit,:prov_dir,:prov_tel,:prov_email,:prov_web );";
+        $sql = "INSERT INTO `proveedores` (`prov_estado`, `prov_empresa`, `prov_cuit`, `prov_dir`, `prov_tel`, `prov_email`, `prov_web`) VALUES (:prov_estado,:nombre_prov,:prov_cuit,:prov_dir,:prov_tel,:prov_email,:prov_web);";
 
         $params = [
             ':nombre_prov' => $this->prov_empresa,
